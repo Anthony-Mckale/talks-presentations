@@ -1,0 +1,58 @@
+
+Roman to Arabic Pseudo Code
+=====================================
+convert to_arabic_number MCDIV into arabic number
+1) Check numerals in order of size {'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1}
+ 2) Check for repeated M (1000)
+  3) When found M, add 1000, remove M from current str MCDIV
+   4) Current arabic number is 1000, numeral left to parse is CDIV
+ 2) Check for repeated CM (900)
+ 2) Check for repeated D (500)
+ 2) Check for repeated CD (400)
+  3) When found CD, add 400, remove CD from current str CDIV
+   4) Current arabic number is 1400, numeral left to parse is IV
+ 2) Check for repeated C (100)
+ 2) Check for repeated XC (90)
+ 2) Check for repeated L (50)
+ 2) Check for repeated XL (40)
+ 2) Check for repeated X (10)
+ 2) Check for repeated IX (9)
+ 2) Check for repeated V (5)
+ 2) Check for repeated IV (4)
+  3) When found IV, add 4, remove IV from current str IV
+   4) Current arabic number is 1404, numeral left to parse is
+ 2) Check for repeated I (1)
+to_arabic_number(MCDIV) is 1404
+1404
+
+Arabic to Roman Pseudo Code
+=====================================
+convert to_roman_numeral 2456 into roman numeral
+1) Check numerals in order of size {'M': 1000, 'CM': 900, 'D': 500, 'CD': 400, 'C': 100, 'XC': 90, 'L': 50, 'XL': 40, 'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1}
+ 2) Check for repeated M (1000)
+  3) When found M, remove 1000, add M to  from current number 2456
+   4) Current numeral is M, arabic number left to parse is 1456
+  3) When found M, remove 1000, add M to M from current number 1456
+   4) Current numeral is MM, arabic number left to parse is 456
+ 2) Check for repeated CM (900)
+ 2) Check for repeated D (500)
+ 2) Check for repeated CD (400)
+  3) When found CD, remove 400, add CD to MM from current number 456
+   4) Current numeral is MMCD, arabic number left to parse is 56
+ 2) Check for repeated C (100)
+ 2) Check for repeated XC (90)
+ 2) Check for repeated L (50)
+  3) When found L, remove 50, add L to MMCD from current number 56
+   4) Current numeral is MMCDL, arabic number left to parse is 6
+ 2) Check for repeated XL (40)
+ 2) Check for repeated X (10)
+ 2) Check for repeated IX (9)
+ 2) Check for repeated V (5)
+  3) When found V, remove 5, add V to MMCDL from current number 6
+   4) Current numeral is MMCDLV, arabic number left to parse is 1
+ 2) Check for repeated IV (4)
+ 2) Check for repeated I (1)
+  3) When found I, remove 1, add I to MMCDLV from current number 1
+   4) Current numeral is MMCDLVI, arabic number left to parse is 0
+to_roman_numeral(2456) is MMCDLVI
+MMCDLVI
