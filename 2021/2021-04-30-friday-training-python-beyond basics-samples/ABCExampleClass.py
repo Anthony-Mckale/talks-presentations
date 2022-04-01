@@ -45,5 +45,6 @@ foo = FooClass()
 print(bar.do_some_thing('ting'))
 print(foo.do_some_thing('ting'))
 
-abstarct = BaseClassMeta()
-abstarct.do_some_thing('ting')
+# print("Can not create ABC directly")
+# abstract = BaseClassMeta()
+# abstract.do_some_thing('ting')
