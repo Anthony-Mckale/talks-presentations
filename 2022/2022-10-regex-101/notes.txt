@@ -1,0 +1,10 @@
+add (.)
+remember to equate
+* == {0,}
++ == {1,}
+? == {0,1}
+
+as question
+
+
+https://alf.nu/RegexGolf?world=regex&level=r00
